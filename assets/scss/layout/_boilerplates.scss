@@ -1,0 +1,33 @@
+@use '../utils' as u;
+
+:root {
+    --textColor: hsl(0, 0%, 100%);
+    //--borderColor: hsl(310, 100%, 50%);
+    --background: hsl(0, 0%, 0%);
+    --grey: hsl(0, 0%, 47%);
+    --goldShade: hsl(50, 83%, 50%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-size: u.rem(16);
+    scroll-behavior: smooth;
+    color: var(--textColor)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.swiper {
+    width: 100%;
+  }

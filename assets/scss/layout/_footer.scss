@@ -1,0 +1,18 @@
+@use '../utils' as u;
+
+footer {
+    background-color: #000;
+    text-align: center;
+    overflow: hidden;
+    img {
+        object-fit: contain;
+        height: u.rem(180);
+        width: u.rem(180);
+        margin-bottom: u.rem(-20);
+
+        @media(orientation: portrait) {
+            height: u.rem(120);
+            width: u.rem(120);
+        }
+    }
+}

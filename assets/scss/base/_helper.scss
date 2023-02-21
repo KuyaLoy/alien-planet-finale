@@ -1,0 +1,21 @@
+@use '../utils' as u;
+
+.d-none {
+    display: none !important;
+}
+
+
+.title-text {
+    font-size: 4.167rem;
+    font-size: clamp(4.167rem, 2.7754rem + 6.958vw, 11.125rem);
+    font-family: 'DrukText-SuperItalic-Trial';
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: u.rem(1023)) {
+    .mobile-hide {
+        display: none !important;
+    }
+}

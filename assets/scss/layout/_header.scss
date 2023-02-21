@@ -1,0 +1,60 @@
+@use '../utils' as u;
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: #1e5f50;
+  padding-top: u.rem(20);
+  padding-bottom: u.rem(20);
+  width: 100%;
+  z-index: 999;
+  
+  ul {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: u.rem(20);
+    grid-row-gap: 0px;
+
+    li {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.8125rem;
+        font-size: clamp(0.8125rem, 0.35rem + 2.3125vw, 3.125rem);
+        font-family: "DrukText-Bold-Trial";
+
+        position: relative;
+
+        &::after {
+          border-bottom: 3px solid #00E8FF;
+          position: absolute;
+          left: 50%;
+          content: ' ';
+          transform: translateX(-50%);
+          transition: width 0.5s linear;
+          width: 0;
+          height: 0;
+          bottom: 0;
+
+          @media(orientation: portrait) {
+            bottom: u.rem(-5);
+        }
+          
+        }
+        &:hover::after, &.active:after {
+          width: 100%
+        }
+
+        // &:hover, &.active {
+        //   border-bottom: #00E8FF u.rem(3) solid;
+        // }
+      }
+
+    }
+    
+  }
+}
